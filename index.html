@@ -43,8 +43,8 @@
     <div id="komentarji" class="container hidden">
         <h2>Komentarji</h2>
         <div class="komentar" onclick="odpriModal(1)">
-            <small>AVTOR: ADMIN</small>
-            <strong>ADMINOV KOMENTAR</strong>
+            <small>AVTOR: Jaša Petrinjak</small>
+            <strong>Dominik Pačnik</strong>
         </div>
         <div class="komentar" onclick="odpriModal(2)">
             <small>AVTOR: ADMIN</small>
@@ -96,10 +96,11 @@
         
         function odpriModal(komentarId) {
             if (komentarId === 1) {
-                document.getElementById("modal-title").innerText = "ADMINOV KOMENTAR";
-                document.getElementById("modal-author").innerText = "Avtor: ADMIN";
-                document.getElementById("modal-rating").innerText = "OCENA: 4";
-                document.getElementById("modal-description").innerText = "Adminov komentar še prihaja!";
+                document.getElementById("modal-title").innerText = "DOMINIK PAČNIK";
+                document.getElementById("modal-author").innerText = "Avtor: Jaša Petrinjak";
+                document.getElementById("modal-date").innerText = "10.03.2025";
+                document.getElementById("modal-rating").innerText = "OCENA: 1";
+                document.getElementById("modal-description").innerText = "Ta človek mene tolk nenormalno nervira! Upam, da dobi kdaj boljse mnenje!";
             } else if (komentarId === 2) {
                 document.getElementById("modal-title").innerText = "ADMINOV KOMENTAR 2";
                 document.getElementById("modal-author").innerText = "Vpisal: Admin";
