@@ -56,6 +56,10 @@
             <small>AVTOR: Pia Kešpret Barukčič | 11.03.2025</small>
             <strong>SARA KUMAR</strong>
         </div>
+        <div class="komentar" onclick="odpriModal(6)">
+            <small>AVTOR: Matic Čevnik | 11.03.2025</small>
+            <strong>KLARA LUCIJA PEČNIK</strong>
+        </div>
     </div>
     
     <!-- Nova sekcija za "Ostalo" -->
@@ -86,7 +90,7 @@
     </div>
     
     <footer>
-        Verzija 1.0 | 10.03.2025 - 20:39
+        Verzija 1.0 | 10.03.2025 - 20:44
     </footer>
 
     <script>
@@ -151,6 +155,11 @@
                 document.getElementById("modal-author").innerText = "Avtor: ? | 11.03.2025";
                 document.getElementById("modal-rating").innerText = "?";
                 document.getElementById("modal-description").innerText = "?";
+            } else if (komentarId === 6) {
+                document.getElementById("modal-title").innerText = "KLARA LUCIJA PEČNIK";
+                document.getElementById("modal-author").innerText = "Avtor: Matic Čevnik | 11.03.2025";
+                document.getElementById("modal-rating").innerText = "Ocena: 3";
+                document.getElementById("modal-description").innerText = "ne zna nehat pecat, ne da mira ko ji reces da je dovolj pecanja ";
             } 
             document.getElementById("overlay").style.display = "flex";
         }
