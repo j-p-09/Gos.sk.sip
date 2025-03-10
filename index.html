@@ -43,19 +43,19 @@
     <div id="komentarji" class="container hidden">
         <h2>Komentarji</h2>
         <div class="komentar" onclick="odpriModal(1)">
-            <small>AVTOR: Jaša Petrinjak</small>
-            <strong>Dominik Pačnik</strong>
+            <small>AVTOR: Jaša Petrinjak | 10.03.2025</small>
+            <strong>DOMINIK PAČNIK</strong>
         </div>
         <div class="komentar" onclick="odpriModal(2)">
-            <small>AVTOR: ADMIN</small>
-            <strong>ADMINOV KOMENTAR 2</strong>
+            <small>AVTOR: ? | 11.03.2025</small>
+            <strong>?</strong>
         </div>
     </div>
     
     <div id="overlay" class="overlay" onclick="zapriModal()">
         <div class="modal" onclick="event.stopPropagation()">
             <h2 id="modal-title">ADMINOV KOMENTAR</h2>
-            <p><small id="modal-author">Avtor: ADMIN</small></p>
+            <p><small id="modal-author">Avtor: ADMIN | 10.03.2025</small></p>
             <p><strong id="modal-rating">OCENA: 4</strong></p>
             <p>Opis:</p>
             <p id="modal-description">Adminov komentar še prihaja!</p>
@@ -63,7 +63,7 @@
     </div>
     
     <footer>
-        Verzija 1.0 | Stran je še v nastajanju
+        Verzija 1.0 | 10.03.2025 - 16:04
     </footer>
 
     <script>
@@ -97,14 +97,14 @@
         function odpriModal(komentarId) {
             if (komentarId === 1) {
                 document.getElementById("modal-title").innerText = "DOMINIK PAČNIK";
-                document.getElementById("modal-author").innerText = "Avtor: Jaša Petrinjak";
+                document.getElementById("modal-author").innerText = "Avtor: Jaša Petrinjak | 10.03.2025";
                 document.getElementById("modal-rating").innerText = "OCENA: 1";
                 document.getElementById("modal-description").innerText = "Ta človek mene tolk nenormalno nervira! Upam, da dobi kdaj boljse mnenje!";
             } else if (komentarId === 2) {
-                document.getElementById("modal-title").innerText = "ADMINOV KOMENTAR 2";
-                document.getElementById("modal-author").innerText = "Vpisal: Admin";
-                document.getElementById("modal-rating").innerText = "OCENA: 3";
-                document.getElementById("modal-description").innerText = "/";
+                document.getElementById("modal-title").innerText = "?";
+                document.getElementById("modal-author").innerText = "Avtor: ? | 11.03.2025";
+                document.getElementById("modal-rating").innerText = "OCENA: ?";
+                document.getElementById("modal-description").innerText = "?";
             }
             document.getElementById("overlay").style.display = "flex";
         }
@@ -115,3 +115,4 @@
     </script>
 </body>
 </html>
+
