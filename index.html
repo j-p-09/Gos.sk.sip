@@ -33,6 +33,7 @@
         <div class="menu">
             <button onclick="pokaziObrazec()">VPIŠI</button>
             <button onclick="pokaziKomentarje()">KOMENTARJI</button>
+            <button onclick="pokaziOstalo()">OSTALO</button> <!-- Dodali gumb za Ostalo -->
         </div>
     </div>
     
@@ -42,7 +43,7 @@
     
     <div id="komentarji" class="container hidden">
         <h2>Komentarji</h2>
-<p><smal><red>Kmalu pride tudi stran zarot, ljubezni in še veliko več!</red></smal></p>
+        <p><smal><red>Kmalu pride tudi stran zarot, ljubezni in še veliko več!</red></smal></p>
         <div class="komentar" onclick="odpriModal(1)">
             <small>AVTOR: Jaša Petrinjak | 10.03.2025</small>
             <strong>DOMINIK PAČNIK</strong>
@@ -57,6 +58,23 @@
         </div>
     </div>
     
+    <!-- Nova sekcija za "Ostalo" -->
+    <div id="ostalo" class="container hidden">
+        <h2>Ostalo</h2>
+        <p><small>Ljubezenska pisma ali zarote.</small></p>
+        <p><small><b>! ChatGpt vsako pismo ali zaroto pregleda, ter spremeni spol, tako da je moška oblika spola privzeta!</b></small></p>
+       
+        <div class="komentar" onclick="odpriModal(4)">
+            <small>AVTOR: Anonimno | 10.03.2025</small>
+            <strong>MATIC!</strong>
+        </div>
+        <div class="komentar" onclick="odpriModal(5)">
+            <small>AVTOR: ? | ?</small>
+            <strong>?</strong>
+        </div>
+   
+    </div>
+    
     <div id="overlay" class="overlay" onclick="zapriModal()">
         <div class="modal" onclick="event.stopPropagation()">
             <h2 id="modal-title">ADMINOV KOMENTAR</h2>
@@ -68,7 +86,7 @@
     </div>
     
     <footer>
-        Verzija 1.0 | 10.03.2025 - 19:34
+        Verzija 1.0 | 10.03.2025 - 20:20
     </footer>
 
     <script>
@@ -92,11 +110,19 @@
         function pokaziObrazec() {
             document.getElementById("obrazec").classList.remove("hidden");
             document.getElementById("komentarji").classList.add("hidden");
+            document.getElementById("ostalo").classList.add("hidden");
         }
         
         function pokaziKomentarje() {
             document.getElementById("komentarji").classList.remove("hidden");
             document.getElementById("obrazec").classList.add("hidden");
+            document.getElementById("ostalo").classList.add("hidden");
+        }
+
+        function pokaziOstalo() {
+            document.getElementById("ostalo").classList.remove("hidden");
+            document.getElementById("obrazec").classList.add("hidden");
+            document.getElementById("komentarji").classList.add("hidden");
         }
         
         function odpriModal(komentarId) {
@@ -115,7 +141,17 @@
                 document.getElementById("modal-author").innerText = "Avtor: Pia Kešpret Barukčič | 11.03.2025";
                 document.getElementById("modal-rating").innerText = "OCENA: 1";
                 document.getElementById("modal-description").innerText = "z eno besedo obup z vecimi besedami nesposobna al pa sam ne pokaže sposobnosti sam pac čudna na sploh pa tak nauci popolnoma nic o prpravlanju vodovih pa sploh komentirali ne bomo ziva groza";
- }
+            } else if (komentarId === 4) {
+                document.getElementById("modal-title").innerText = "MATIC!";
+                document.getElementById("modal-author").innerText = "Avtor: Anonimno | 10.03.2025";
+                document.getElementById("modal-rating").innerText = "LJUBEZENSKO PISMO";
+                document.getElementById("modal-description").innerText = "Matic! Že od kar sem te prvič videl v teb vidim neki več kokr pa sam prijatla! Že od tabora 2023 upam da me boš zaročil ampak me nisi še nikoli! Izpolni mi željo prosim!";
+            } else if (komentarId === 5) {
+                document.getElementById("modal-title").innerText = "?";
+                document.getElementById("modal-author").innerText = "Avtor: ? | 11.03.2025";
+                document.getElementById("modal-rating").innerText = "?";
+                document.getElementById("modal-description").innerText = "?";
+            } 
             document.getElementById("overlay").style.display = "flex";
         }
         
@@ -125,4 +161,3 @@
     </script>
 </body>
 </html>
-
