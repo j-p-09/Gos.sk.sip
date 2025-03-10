@@ -47,8 +47,12 @@
             <strong>DOMINIK PAČNIK</strong>
         </div>
         <div class="komentar" onclick="odpriModal(2)">
-            <small>AVTOR: ? | 11.03.2025</small>
-            <strong>?</strong>
+            <small>AVTOR: Matic Čevnik | 11.03.2025</small>
+            <strong>LIZA NOVAK</strong>
+        </div>
+        <div class="komentar" onclick="odpriModal(3)">
+            <small>AVTOR: Pia Kešpret Barukčič | 11.03.2025</small>
+            <strong>SARA KUMAR</strong>
         </div>
     </div>
     
@@ -63,7 +67,7 @@
     </div>
     
     <footer>
-        Verzija 1.0 | 10.03.2025 - 16:04
+        Verzija 1.0 | 10.03.2025 - 19:26
     </footer>
 
     <script>
@@ -101,11 +105,16 @@
                 document.getElementById("modal-rating").innerText = "OCENA: 1";
                 document.getElementById("modal-description").innerText = "Ta človek mene tolk nenormalno nervira! Upam, da dobi kdaj boljse mnenje!";
             } else if (komentarId === 2) {
-                document.getElementById("modal-title").innerText = "?";
-                document.getElementById("modal-author").innerText = "Avtor: ? | 11.03.2025";
-                document.getElementById("modal-rating").innerText = "OCENA: ?";
-                document.getElementById("modal-description").innerText = "?";
-            }
+                document.getElementById("modal-title").innerText = "LIZA NOVAK";
+                document.getElementById("modal-author").innerText = "Avtor: Matic Čevnik | 11.03.2025";
+                document.getElementById("modal-rating").innerText = "OCENA: 1";
+                document.getElementById("modal-description").innerText = "Dela se koda je glavna, ma neko bolezen ampak to vseen ne pomeni da se skoz štuliš zravn tja kamor ne spadaš, dela se da je prijazna sam ni";
+            } else if (komentarId === 3) {
+                document.getElementById("modal-title").innerText = "SARA KUMAR";
+                document.getElementById("modal-author").innerText = "Avtor: Pia Kešpret Barukčič | 11.03.2025";
+                document.getElementById("modal-rating").innerText = "OCENA: 1";
+                document.getElementById("modal-description").innerText = "z eno besedo obup z vecimi besedami nesposobna al pa sam ne pokaže sposobnosti sam pac čudna na sploh pa tak nauci popolnoma nic o prpravlanju vodovih pa sploh komentirali ne bomo ziva groza";
+ }
             document.getElementById("overlay").style.display = "flex";
         }
         
